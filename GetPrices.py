@@ -1,4 +1,5 @@
 import requests
+from SendEmail import send
 
 # CB stands for Coinbase
 # BH stands for Bithumb
@@ -17,6 +18,10 @@ def GetPrice(cryptocurrency):
     BHPriceUSD = BHPriceKRW / KRWUSD
     return {'Currency': cryptocurrency, 'CB': CBPriceUSD, 'BH': BHPriceUSD, 'Spread': BHPriceUSD/CBPriceUSD-1}
 
-print(GetPrice('BTC'))
-print(GetPrice('ETH'))
-print(GetPrice('LTC'))
+BTC = GetPrice('BTC')
+ETH = GetPrice('ETH')
+LTC = GetPrice('LTC')
+
+if (BTC['Spread']>0.1) or (ETH['Spread']>0.1 or LTC['Spread']>0.1):
+    message = str(BTC) + '\n' + str(ETH) + '\n' + str(LTC)
+    send(message)
