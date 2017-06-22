@@ -22,6 +22,8 @@ BTC = GetPrice('BTC')
 ETH = GetPrice('ETH')
 LTC = GetPrice('LTC')
 
-if (BTC['Spread']>0.1) or (ETH['Spread']>0.1 or LTC['Spread']>0.1):
+threshold = 0.15
+
+if (BTC['Spread']>threshold) or (ETH['Spread']>threshold or LTC['Spread']>threshold):
     message = str(BTC) + '\n' + str(ETH) + '\n' + str(LTC)
     send(message)
