@@ -1,0 +1,17 @@
+beautifulsoup4==4.5.3
+certifi==2017.4.17
+chardet==3.0.3
+dict2xml==1.5
+idna==2.5
+json2csv==0.1.0
+json2xml==1.2.5
+lxml==3.7.3
+numpy==1.12.1
+pandas==0.20.1
+python-dateutil==2.6.0
+pytz==2017.2
+requests==2.13.0
+simplejson==3.10.0
+six==1.10.0
+urllib3==1.21.1
+virtualenv==15.1.0
