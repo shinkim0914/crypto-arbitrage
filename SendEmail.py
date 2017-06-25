@@ -17,5 +17,10 @@ def send(text):
     s.login('cryptoarbitrage2017@gmail.com', '6LiaMDnpQ72h')
 
     for addr in toaddr:
+        msg = MIMEMultipart()
+        msg['From'] = fromaddr
+        msg['Subject'] = "Spread threshold has been exceeded"
         msg['To'] = addr
+        msg_body = MIMEText(text, 'plain')
+        msg.attach(msg_body)
         s.send_message(msg)
