@@ -6,7 +6,7 @@ idna==2.5
 json2csv==0.1.0
 json2xml==1.2.5
 lxml==3.7.3
-numpy==1.12.1
+numpy==1.21.0
 pandas==0.20.1
 python-dateutil==2.6.0
 pytz==2017.2
